@@ -1,0 +1,12 @@
+{
+  "name": "world-data-svg-library",
+  "version": "0.0.1-SNAPSHOT03",
+  "peerDependencies": {
+    "@angular/common": "11.0.9",
+    "@angular/core": "11.0.9"
+  },
+  "dependencies": {
+    "tslib": "2.0.0",
+    "xml2js": "0.4.23"
+  }
+}
