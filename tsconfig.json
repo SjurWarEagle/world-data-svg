@@ -15,10 +15,7 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "paths": {
       "world-data-svg-library": [
         "dist/world-data-svg-library/world-data-svg-library",

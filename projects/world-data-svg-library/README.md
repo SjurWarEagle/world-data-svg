@@ -5,19 +5,23 @@ Not complete yet.
 !!!
 
 # Usage
+
 Load the module:
+
 ```typescript
 
 @NgModule({
-[...]
+...
   imports: [
-[...]
+...
     WorldCountryDataLibModule
   ],
-[...]
+...
 
 ```
+
 Use the component `world-country` and bind your data to it:
+
 ```typescript
       <world-country
         [worldData]="worldDataBasicStatic"
@@ -25,6 +29,7 @@ Use the component `world-country` and bind your data to it:
 ```
 
 # Demo
+
 https://stackblitz.com/edit/demo-world-data-svg
 
 #Notes

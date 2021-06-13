@@ -1,37 +1,39 @@
-import {Component, OnInit} from '@angular/core';
-import {WorldData} from "world-data-svg-library";
-import {timer} from "rxjs";
+import { Component, OnInit } from '@angular/core';
+import { WorldData } from 'world-data-svg-library';
+import { timer } from 'rxjs';
 import * as Chance from 'chance';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   public worldDataBasicStatic: WorldData = {
-    colors: []
-    , countries: []
+    colors: [],
+    countries: [],
   };
 
   public worldDataBasicRandom: WorldData = {
-    colors: []
-    , countries: []
+    colors: [],
+    countries: [],
   };
 
   public worldDataBasicRandomValues: WorldData = {
-    colors: []
-    , countries: []
+    colors: [],
+    countries: [],
   };
 
   public ngOnInit(): void {
     this.worldDataBasicStatic = {
-      colors: [{
-        color: '#ff0000',
-        max: 999999999999,
-        min: 0
-      }]
-      , countries: [
+      colors: [
+        {
+          color: '#ff0000',
+          max: 999999999999,
+          min: 0,
+        },
+      ],
+      countries: [
         {
           isoCode: 'DE',
           value: 100,
@@ -39,8 +41,8 @@ export class AppComponent implements OnInit {
         {
           isoCode: 'US',
           value: 1000,
-        }
-      ]
+        },
+      ],
     };
 
     const chance = new Chance();
@@ -50,39 +52,39 @@ export class AppComponent implements OnInit {
           {
             color: '#FF0000',
             max: 10,
-            min: 0
+            min: 0,
           },
           {
             color: '#00FF00',
             max: 20,
-            min: 10
+            min: 10,
           },
           {
             color: '#FFFF00',
             max: 30,
-            min: 20
-          }
+            min: 20,
+          },
         ],
-        countries: []
-      }
+        countries: [],
+      };
 
       this.worldDataBasicRandomValues = {
         colors: [
           {
             color: '#FF0000',
             max: 10,
-            min: 0
+            min: 0,
           },
           {
             color: '#00FF00',
             max: 20,
-            min: 10
+            min: 10,
           },
           {
             color: '#FFFF00',
             max: 30,
-            min: 20
-          }
+            min: 20,
+          },
         ],
         countries: [
           {
@@ -124,21 +126,27 @@ export class AppComponent implements OnInit {
           {
             isoCode: 'CH',
             value: 0,
-          }
-        ]
-      }
+          },
+        ],
+      };
 
       for (let i = 0; i < 200; i++) {
         this.worldDataBasicRandom.countries.push({
-            isoCode: chance.country(),
-            value: chance.integer({min: 0, max: 30}),
-          },
-        )
+          isoCode: chance.country(),
+          value: chance.integer({ min: 0, max: 30 }),
+        });
       }
 
-      for (let i = 0; i < this.worldDataBasicRandomValues.countries.length; i++) {
-        this.worldDataBasicRandomValues.countries[i].value = chance.integer({min: 0, max: 30});
+      for (
+        let i = 0;
+        i < this.worldDataBasicRandomValues.countries.length;
+        i++
+      ) {
+        this.worldDataBasicRandomValues.countries[i].value = chance.integer({
+          min: 0,
+          max: 30,
+        });
       }
-    })
+    });
   }
 }

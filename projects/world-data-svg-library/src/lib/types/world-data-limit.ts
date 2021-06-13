@@ -1,5 +1,5 @@
 export interface WorldDataLimit {
-    color: string;
-    min: number
-    max: number
+  color: string;
+  min: number;
+  max: number;
 }
