@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import {WorldCountryComponent} from "./world-country.component";
 
-
-
 @NgModule({
   declarations: [
     WorldCountryComponent

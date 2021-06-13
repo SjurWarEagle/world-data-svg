@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {WorldData} from "../../types/world-data";
 import {SvgLoaderService} from "../../services/svg-loader.service";
 
@@ -7,24 +7,20 @@ import {SvgLoaderService} from "../../services/svg-loader.service";
   templateUrl: './world-country.component.html',
   styleUrls: ['./world-country.component.css']
 })
-export class WorldCountryComponent implements OnInit {
+export class WorldCountryComponent {
   @ViewChild('dataContainer')
-  dataContainer!: ElementRef;
+  private dataContainer!: ElementRef;
+
 
   @Input()
   public set worldData(worldData: WorldData) {
 
-    this.svgLoaderService.load(worldData).then((svgString) => {
-      this.dataContainer.nativeElement.innerHTML = svgString;
+    this.svgLoaderService.load(worldData).then((svgAsString) => {
+      this.dataContainer.nativeElement.innerHTML=svgAsString;
     });
   }
 
-
   constructor(private svgLoaderService: SvgLoaderService) {
-  }
-
-
-  public ngOnInit(): void {
   }
 
 }

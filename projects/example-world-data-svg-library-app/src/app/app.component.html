@@ -41,4 +41,31 @@
       ></world-country>
     </div>
   </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Sizes
+      </mat-panel-title>
+      <mat-panel-description>Show image in different sizes</mat-panel-description>
+    </mat-expansion-panel-header>
+    <span>
+      <world-country
+        style="width: 200px; height: 100px"
+        [worldData]="worldDataBasicRandomValues"
+      ></world-country>
+    </span>
+    <span>
+      <world-country
+        style="width: 400px; height: 200px"
+        [worldData]="worldDataBasicRandomValues"
+      ></world-country>
+    </span>
+    <span>
+      <world-country
+        style="width: 800px; height: 400px"
+        [worldData]="worldDataBasicRandomValues"
+      ></world-country>
+    </span>
+  </mat-expansion-panel>
 </mat-accordion>

@@ -128,7 +128,7 @@ export class AppComponent implements OnInit {
         ]
       }
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 200; i++) {
         this.worldDataBasicRandom.countries.push({
             isoCode: chance.country(),
             value: chance.integer({min: 0, max: 30}),
@@ -137,7 +137,7 @@ export class AppComponent implements OnInit {
       }
 
       for (let i = 0; i < this.worldDataBasicRandomValues.countries.length; i++) {
-        this.worldDataBasicRandomValues.countries[i].value=chance.integer({min: 0, max: 30});
+        this.worldDataBasicRandomValues.countries[i].value = chance.integer({min: 0, max: 30});
       }
     })
   }
