@@ -5,9 +5,19 @@ import { AppComponent } from './app.component';
 import { WorldCountryDataLibModule } from '../../../world-data-svg-library/src/lib/components/world-country/world-country-module';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RandomCountriesComponent } from './components/random-countries/random-countries.component';
+import { RandomValuesComponent } from './components/random-values/random-values.component';
+import { DifferentSizesComponent } from './components/different-sizes/different-sizes.component';
+import { SimpleComponent } from './components/simple/simple.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    RandomCountriesComponent,
+    RandomValuesComponent,
+    DifferentSizesComponent,
+    SimpleComponent,
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,

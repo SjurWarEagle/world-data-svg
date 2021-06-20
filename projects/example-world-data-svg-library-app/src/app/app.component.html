@@ -1,64 +1,40 @@
 <mat-accordion>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
-      <mat-panel-title> Basic usage </mat-panel-title>
+      <mat-panel-title> Basic usage</mat-panel-title>
       <mat-panel-description
-        >Simple usage, only coloring some countries.</mat-panel-description
-      >
+        >Simple usage, only coloring some countries.
+      </mat-panel-description>
     </mat-expansion-panel-header>
-    <div>
-      <world-country [worldData]="worldDataBasicStatic"></world-country>
-    </div>
+    <app-simple></app-simple>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Random Values</mat-panel-title>
+      <mat-panel-description
+        >Same as simple usage but with changing data.
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-random-values></app-random-values>
   </mat-expansion-panel>
 
   <mat-expansion-panel>
     <mat-expansion-panel-header>
-      <mat-panel-title> Random Values </mat-panel-title>
+      <mat-panel-title> Random Values</mat-panel-title>
       <mat-panel-description
-        >Same as simple usage but with changing data.</mat-panel-description
-      >
+        >Fixed countries, random values
+      </mat-panel-description>
     </mat-expansion-panel-header>
-    <div>
-      <world-country [worldData]="worldDataBasicRandom"></world-country>
-    </div>
+    <app-random-countries></app-random-countries>
   </mat-expansion-panel>
 
   <mat-expansion-panel>
     <mat-expansion-panel-header>
-      <mat-panel-title> Random Values </mat-panel-title>
+      <mat-panel-title> Sizes</mat-panel-title>
       <mat-panel-description
-        >Fixed countries, random values</mat-panel-description
-      >
+        >Show image in different sizes
+      </mat-panel-description>
     </mat-expansion-panel-header>
-    <div>
-      <world-country [worldData]="worldDataBasicRandomValues"></world-country>
-    </div>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title> Sizes </mat-panel-title>
-      <mat-panel-description
-        >Show image in different sizes</mat-panel-description
-      >
-    </mat-expansion-panel-header>
-    <span>
-      <world-country
-        style="width: 200px; height: 100px"
-        [worldData]="worldDataBasicRandomValues"
-      ></world-country>
-    </span>
-    <span>
-      <world-country
-        style="width: 400px; height: 200px"
-        [worldData]="worldDataBasicRandomValues"
-      ></world-country>
-    </span>
-    <span>
-      <world-country
-        style="width: 800px; height: 400px"
-        [worldData]="worldDataBasicRandomValues"
-      ></world-country>
-    </span>
+    <app-different-sizes></app-different-sizes>
   </mat-expansion-panel>
 </mat-accordion>
