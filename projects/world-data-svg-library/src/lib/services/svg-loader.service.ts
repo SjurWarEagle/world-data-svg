@@ -13,8 +13,6 @@ export class SvgLoaderService {
   public async load(worldData: WorldData): Promise<string> {
     // const improvedResponse = response.data.replace("\ufeff", "");
     const xml = await new Parser().parseStringPromise(SvgWorld.svgFileAsString);
-    //console.dir(xml);
-    // console.dir(worldData);
 
     // TODO add size handling
     // xml.svg.$.width = '1000';

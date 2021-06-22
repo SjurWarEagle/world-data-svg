@@ -9,6 +9,7 @@ import { RandomCountriesComponent } from './components/random-countries/random-c
 import { RandomValuesComponent } from './components/random-values/random-values.component';
 import { DifferentSizesComponent } from './components/different-sizes/different-sizes.component';
 import { SimpleComponent } from './components/simple/simple.component';
+import { BorderComponent } from './components/border/border.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SimpleComponent } from './components/simple/simple.component';
     RandomValuesComponent,
     DifferentSizesComponent,
     SimpleComponent,
+    BorderComponent,
   ],
   imports: [
     BrowserAnimationsModule,
